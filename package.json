@@ -4,14 +4,16 @@
   "private": true,
   "dependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
     "babel-polyfill": "^6.26.0",
-    "http-server": "^0.11.1"
+    "babel-preset-es2015": "^6.24.1",
+    "http-server": "^0.11.1",
+    "node-sass": "^4.8.3"
   },
   "scripts": {
     "start": "npm run serve & npm run dev",
     "serve": "http-server ./dist/ -o",
-    "dev": "npm run build:js",
-    "build:js": "babel -w ./src/js/scripts.js -o ./dist/assets/js/scripts.js"
+    "dev": "npm run build:js & npm run build:css",
+    "build:js": "babel -w ./src/js/scripts.js -o ./dist/assets/js/scripts.js",
+    "build:css": "node-sass --include-path scss ./src/css/widgets/collapsible/styles.scss ./dist/assets/css/styles.css -w"
   }
 }
