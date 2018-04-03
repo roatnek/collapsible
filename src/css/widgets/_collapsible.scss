@@ -1,4 +1,5 @@
-@import "../utilities";
+@import "utilities";
+@import "effects";
 
 .collapsible-block {
   @include hide-myself;

@@ -14,6 +14,6 @@
     "serve": "http-server ./dist/ -o",
     "dev": "npm run build:js & npm run build:css",
     "build:js": "babel -w ./src/js/scripts.js -o ./dist/assets/js/scripts.js",
-    "build:css": "node-sass --include-path scss ./src/css/widgets/collapsible/styles.scss ./dist/assets/css/styles.css -w"
+    "build:css": "node-sass --include-path scss ./src/css/styles.scss ./dist/assets/css/styles.css -w"
   }
 }

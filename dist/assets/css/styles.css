@@ -1,3 +1,7 @@
+.toggle-button {
+  display: inline-block;
+  padding: 0.25em 2em; }
+
 html.hide-widgets .collapsible-block {
   display: none; }
 
