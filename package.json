@@ -10,8 +10,8 @@
   },
   "scripts": {
     "start": "npm run serve & npm run dev",
-    "serve": "http-server ./ -o",
+    "serve": "http-server ./dist/ -o",
     "dev": "npm run build:js",
-    "build:js": "babel -w ./src/js/scripts.js -o ./scripts.js"
+    "build:js": "babel -w ./src/js/scripts.js -o ./dist/assets/js/scripts.js"
   }
 }
