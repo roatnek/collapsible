@@ -1,0 +1,9 @@
+@import "../utilities";
+
+.collapsible-block {
+  @include hide-myself;
+
+  &[aria-hidden="true"] {
+    display: none;
+  }
+}

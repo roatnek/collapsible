@@ -1,8 +1,14 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', () => {
-  setCollapsible();
-});
+const hideWidgetsTemporarily = () => {
+  const html = document.getElementsByTagName('html')[0];
+
+  html.classList.add('hide-widgets');
+
+  document.addEventListener('DOMContentLoaded', () => {
+    html.classList.remove('hide-widgets');
+  });
+}
 
 const setCollapsible = () => {
   const buttons = document.querySelectorAll('.collapsible-button');
@@ -36,3 +42,9 @@ const setCollapsible = () => {
     });
   });
 }
+
+hideWidgetsTemporarily();
+
+document.addEventListener('DOMContentLoaded', () => {
+  setCollapsible();
+});

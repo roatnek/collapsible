@@ -1,8 +1,14 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function () {
-  setCollapsible();
-});
+var hideWidgetsTemporarily = function hideWidgetsTemporarily() {
+  var html = document.getElementsByTagName('html')[0];
+
+  html.classList.add('hide-widgets');
+
+  document.addEventListener('DOMContentLoaded', function () {
+    html.classList.remove('hide-widgets');
+  });
+};
 
 var setCollapsible = function setCollapsible() {
   var buttons = document.querySelectorAll('.collapsible-button');
@@ -36,3 +42,9 @@ var setCollapsible = function setCollapsible() {
     });
   });
 };
+
+hideWidgetsTemporarily();
+
+document.addEventListener('DOMContentLoaded', function () {
+  setCollapsible();
+});

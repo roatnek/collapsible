@@ -1,3 +1,5 @@
+html.hide-widgets .collapsible-block {
+  display: none; }
+
 .collapsible-block[aria-hidden="true"] {
-  display: none;
-}
+  display: none; }
