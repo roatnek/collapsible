@@ -7,4 +7,8 @@
   &[aria-hidden="true"] {
     display: none;
   }
+
+  &[aria-hidden="false"] {
+    animation: fade-in 0.3s;
+  }
 }
