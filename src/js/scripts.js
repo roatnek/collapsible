@@ -24,20 +24,25 @@ const setCollapsible = () => {
     const opened_text = button.getAttribute('data-collapsible-opened-label-text');
     const closed_text = button.getAttribute('data-collapsible-closed-label-text');
 
-    label.textContent = closed_text;
+    if (label && opened_text && closed_text) {
+      label.textContent = closed_text;
+    }
 
     button.addEventListener('click', () => {
-      if (button.getAttribute('aria-expanded') == 'false') {
-        label.textContent = opened_text;
-        button.setAttribute('aria-expanded', 'true');
-        block.setAttribute('aria-hidden', 'false');
+      const isExpanded = button.getAttribute('aria-expanded') == 'true' ? true : false;
+
+      if (label && opened_text && closed_text) {
+        label.textContent = isExpanded ? closed_text : opened_text;
+      }
+
+      button.setAttribute('aria-expanded', !isExpanded + '');
+      block.setAttribute('aria-hidden', isExpanded + '');
+
+      if (isExpanded) {
+        block.removeAttribute('tabindex');
+      } else {
         block.setAttribute('tabindex', '-1');
         block.focus();
-      } else {
-        label.textContent = closed_text;
-        button.setAttribute('aria-expanded', 'false');
-        block.setAttribute('aria-hidden', 'true');
-        block.removeAttribute('tabindex');
       }
     });
   });
