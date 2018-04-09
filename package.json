@@ -10,11 +10,11 @@
   },
   "scripts": {
     "start": "npm run serve && npm run dev",
-    "serve": "http-server ./dist/ -o",
+    "serve": "http-server ./docs/ -o",
     "dev": "npm run watch-build-js && npm run watch-build-css",
-    "build-js": "babel ./src/js/scripts.js -o ./dist/assets/js/scripts.js",
-    "build-css": "node-sass --include-path scss ./src/css/styles.scss ./dist/assets/css/styles.css --output-style expanded",
-    "watch-build-js": "babel -w ./src/js/scripts.js -o ./dist/assets/js/scripts.js",
-    "watch-build-css": "node-sass -w --include-path scss ./src/css/styles.scss ./dist/assets/css/styles.css --output-style expanded"
+    "build-js": "babel ./src/js/scripts.js -o ./docs/assets/js/scripts.js",
+    "build-css": "node-sass --include-path scss ./src/css/styles.scss ./docs/assets/css/styles.css --output-style expanded",
+    "watch-build-js": "babel -w ./src/js/scripts.js -o ./docs/assets/js/scripts.js",
+    "watch-build-css": "node-sass -w --include-path scss ./src/css/styles.scss ./docs/assets/css/styles.css --output-style expanded"
   }
 }
