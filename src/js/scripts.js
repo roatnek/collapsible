@@ -13,7 +13,7 @@ const hideWidgetsTemporarily = () => {
 const setCollapsible = () => {
   const buttons = document.querySelectorAll('.collapsible-button');
 
-  buttons.forEach((button) => {
+  Array.prototype.forEach.call(buttons, (button) => {
     const id    = button.getAttribute('aria-controls');
     const block = document.getElementById(id);
 
