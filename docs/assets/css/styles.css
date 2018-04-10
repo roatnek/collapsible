@@ -52,7 +52,8 @@ a {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 b,
@@ -351,6 +352,18 @@ p {
   text-align: right;
 }
 
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -372,5 +385,6 @@ html.hide-widgets .collapsible-block {
 }
 
 .collapsible-block[aria-hidden="false"] {
-  animation: fade-in 0.3s;
+  -webkit-animation: fade-in 0.3s;
+          animation: fade-in 0.3s;
 }

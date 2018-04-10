@@ -3,12 +3,18 @@
   "description": "collapsible component",
   "private": true,
   "dependencies": {
+    "autoprefixer": "^8.2.0",
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "http-server": "^0.11.1",
     "node-sass": "^4.8.3",
+    "postcss": "^6.0.21",
+    "postcss-cli": "^5.0.0",
     "watch": "^1.0.2"
   },
+  "browserslist": [
+    "last 1 versions"
+  ],
   "scripts": {
     "start": "npm run serve & npm run dev",
     "serve": "http-server ./docs/ -o",
@@ -16,8 +22,9 @@
     "watch": "npm run watch:css & npm run watch:js",
     "watch:css": "watch 'npm run build:css' ./src/css/",
     "watch:js": "watch 'npm run build:js' ./src/js/",
-    "build:css": "npm run compile-sass",
+    "build:css": "npm run compile-sass && npm run add-css-prefix",
     "compile-sass": "node-sass --include-path scss ./src/css/styles.scss ./docs/assets/css/styles.css --output-style expanded",
+    "add-css-prefix": "postcss ./docs/assets/css/styles.css --use autoprefixer --no-map -o ./docs/assets/css/styles.css",
     "build:js": "babel ./src/js/scripts.js -o ./docs/assets/js/scripts.js"
   }
 }
