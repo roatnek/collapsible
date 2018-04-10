@@ -7,22 +7,60 @@
 </head>
 <body>
 <main>
-<h1>Collapsible</h1>
+<h1 class="lev1-heading">Collapsible</h1>
+<p>折りたたみです。トグルボタンの押下で関連ブロックを開閉します。</p>
 
 <section>
-<h2>Sample 1</h2>
-<div><button type="button" class="toggle-button collapsible-button" aria-controls="lorem-ipsum" data-collapsible-opened-label-text="Close Block" data-collapsible-closed-label-text="Open Block"><span class="collapsible-button__label">Open Block</span></button></div>
-<div id="lorem-ipsum" class="collapsible-block">
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<h2 class="lev2-heading">Sample 1</h2>
+<p>
+宇宙移民と宇宙戦争の歴史となった宇宙世紀が終焉後、しばらくの刻が流れた。<br>
+新たな時代、リギルド・センチュリー（R.C.）を迎えた人類の営みと繁栄は、平和と共にこのまま続いて行くものだと思われていた。
+</p>
+<div class="toggle-button-container"><button type="button" class="toggle-button collapsible-button" aria-controls="story" data-collapsible-opened-label-text="つづきを閉じる" data-collapsible-closed-label-text="つづきを開く"><span class="collapsible-button__label">つづきを開く</span></button></div>
+<div id="story" class="collapsible-block">
+<p>
+R.C.1014年。<br>
+地上からそびえ立つ地球と宇宙を繋ぐ軌道エレベータ、キャピタル・タワー。<br>
+地球上のエネルギー源であるフォトン・バッテリーを宇宙よりもたらすが故に神聖視された場所である。
+</p>
+<p>
+そのキャピタル・タワーを守護すべく組織されたキャピタル・ガード候補生のベルリ・ゼナムは、初めての実習の最中、いずれの国の技術でもない高性能モビルスーツ、G-セルフの襲撃を受ける。<br>
+作業用モビルスーツのレクテンで交戦したベルリはG-セルフの捕獲に成功する。
+<p>
+しかし、G-セルフを操縦していたアイーダ・レイハントンを名乗る宇宙海賊の少女に何かを感じるベルリ。<br>
+それは見たこともないはずのG-セルフに対しても同じだった。<br>
+そして、特定条件を満たさなければ動かないはずのG-セルフをベルリは何故か起動させてしまう。
+</p>
+<p>キャピタル・タワーを襲撃する宇宙海賊とアイーダの目的、G-セルフに選ばれたベルリが辿る運命、その果てに待ち受けるリギルド・センチュリー全体を揺るがす真相。</p>
+<p>全てはレコンギスタの始まりに過ぎなかったのだ。</p>
 </div>
 </section>
 
 <section>
-<h2>Sample 2</h2>
-<div><button type="button" class="toggle-button collapsible-button" aria-controls="pellentesque-feugiat" data-collapsible-opened-label-text="Close Block" data-collapsible-closed-label-text="Open Block"><span class="collapsible-button__label">Open Block</span></button></div>
-<div id="pellentesque-feugiat" class="collapsible-block">
-<p>Pellentesque feugiat sed enim sed suscipit. Phasellus mollis vulputate sodales. Nam blandit velit quis tellus ultrices, sit amet varius felis ultricies. Duis dictum consequat turpis vel euismod. Pellentesque fermentum eget orci ut tristique. Duis suscipit nec urna sit amet mattis. Fusce vitae sem porta, tempus massa dignissim, vulputate quam. Mauris diam ex, rhoncus quis libero ac, commodo congue lectus. In commodo eros pretium, auctor elit eget, sodales purus. Nunc risus turpis, tempor id augue in, mollis pulvinar enim. Quisque pulvinar accumsan ligula sed volutpat.</p>
+<h2 class="lev2-heading">Sample 2</h2>
+<dl class="word-list">
+<dt><span class="word-list__word">キャピタル・テリトリィ</span> <span class="word-list__button"><button type="button" class="toggle-button-2 collapsible-button" aria-controls="capital-territory"><span class="toggle-button-2__label">開閉する</span></button></span></dt>
+<div id="capital-territory" class="collapsible-block">
+<dd>エルライド大陸の北部、カリブ海からアマゾン川流域に接する地域。ビルギーズ・シバが首相を務める。</dd>
 </div>
+<dt><span class="word-list__word">キャピタル・タワー</span> <span class="word-list__button"><button type="button" class="toggle-button-2 collapsible-button" aria-controls="capital-tower"><span class="toggle-button-2__label">開閉する</span></button></span></dt>
+<div id="capital-tower" class="collapsible-block">
+<dd>前世紀（宇宙世紀）から残されていた軌道エレベータを再生させたもの。エルライド大陸の北部、カリブ海からアマゾン川流域に接する地域、キャピタル・テリトリィの中心にあり、地上と宇宙とを結んでいる。宇宙から得た物資を地上にもたらすことから神聖視されている。</dd>
+</div>
+<dt><span class="word-list__word">キャピタル・ガード</span> <span class="word-list__button"><button type="button" class="toggle-button-2 collapsible-button" aria-controls="capital-guard"><span class="toggle-button-2__label">開閉する</span></button></span></dt>
+<div id="capital-guard" class="collapsible-block">
+<dd>軌道エレベーター、キャピタル・タワーの防衛を目的としたチーム。タワーの保守や点検も併せて行う。</dd>
+</div>
+<dt><span class="word-list__word">キャピタル・アーミィ</span> <span class="word-list__button"><button type="button" class="toggle-button-2 collapsible-button" aria-controls="capital-army"><span class="toggle-button-2__label">開閉する</span></button></span></dt>
+<div id="capital-army" class="collapsible-block">
+<dd>キャピタル・テリトリィで新たに設立された武装組織。大陸間戦争をつづけているアメリア軍とゴンドワン軍からの攻撃を想定して、あくまで他国からの防衛のためという名目で設立された。</dd>
+</div>
+
+
+
+
+
+</dl>
 </section>
 </main>
 </body>
