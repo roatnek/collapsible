@@ -29,16 +29,16 @@ const setCollapsible = () => {
     }
 
     button.addEventListener('click', () => {
-      const isExpanded = button.getAttribute('aria-expanded') == 'true' ? true : false;
+      const is_expanded = button.getAttribute('aria-expanded') == 'true' ? true : false;
 
       if (label && opened_text && closed_text) {
-        label.textContent = isExpanded ? closed_text : opened_text;
+        label.textContent = is_expanded ? closed_text : opened_text;
       }
 
-      button.setAttribute('aria-expanded', !isExpanded + '');
-      block.setAttribute('aria-hidden', isExpanded + '');
+      button.setAttribute('aria-expanded', !is_expanded + '');
+      block.setAttribute('aria-hidden', is_expanded + '');
 
-      if (isExpanded) {
+      if (is_expanded) {
         block.removeAttribute('tabindex');
       } else {
         block.setAttribute('tabindex', '-1');
